@@ -14,6 +14,7 @@
 		FA6ADA71212B400500CCA326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6ADA6F212B400500CCA326 /* LaunchScreen.storyboard */; };
 		FA6ADA7C212B400500CCA326 /* xgreekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6ADA7B212B400500CCA326 /* xgreekTests.swift */; };
 		FA6ADA87212B400600CCA326 /* xgreekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6ADA86212B400600CCA326 /* xgreekUITests.swift */; };
+		FAF393A9213346EC00109175 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = FAF393A8213346EC00109175 /* assets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		FA6ADA82212B400500CCA326 /* xgreekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xgreekUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA6ADA86212B400600CCA326 /* xgreekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xgreekUITests.swift; sourceTree = "<group>"; };
 		FA6ADA88212B400600CCA326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA73F4A52131A33200CDFF13 /* xgreek.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = xgreek.entitlements; sourceTree = "<group>"; };
+		FAF393A8213346EC00109175 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../../OneDrive/assets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +80,7 @@
 		FA6ADA5A212B400400CCA326 = {
 			isa = PBXGroup;
 			children = (
+				FAF393A8213346EC00109175 /* assets */,
 				FA6ADA65212B400400CCA326 /* xgreek */,
 				FA6ADA7A212B400500CCA326 /* xgreekTests */,
 				FA6ADA85212B400600CCA326 /* xgreekUITests */,
@@ -97,6 +101,7 @@
 		FA6ADA65212B400400CCA326 /* xgreek */ = {
 			isa = PBXGroup;
 			children = (
+				FA73F4A52131A33200CDFF13 /* xgreek.entitlements */,
 				FA6ADA66212B400400CCA326 /* AppDelegate.swift */,
 				FA6ADA68212B400400CCA326 /* ViewController.swift */,
 				FA6ADA6A212B400400CCA326 /* Main.storyboard */,
@@ -193,6 +198,11 @@
 				TargetAttributes = {
 					FA6ADA62212B400400CCA326 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					FA6ADA76212B400500CCA326 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -230,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6ADA71212B400500CCA326 /* LaunchScreen.storyboard in Resources */,
+				FAF393A9213346EC00109175 /* assets in Resources */,
 				FA6ADA6E212B400500CCA326 /* Assets.xcassets in Resources */,
 				FA6ADA6C212B400400CCA326 /* Main.storyboard in Resources */,
 			);
@@ -430,15 +441,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DJCL89LV6X;
 				INFOPLIST_FILE = xgreek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = daybread.org.xgreek;
+				NEW_SETTING = "";
+				PRODUCT_BUNDLE_IDENTIFIER = xgreek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -448,15 +465,20 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DJCL89LV6X;
 				INFOPLIST_FILE = xgreek/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = daybread.org.xgreek;
+				NEW_SETTING = "";
+				PRODUCT_BUNDLE_IDENTIFIER = xgreek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
