@@ -9,40 +9,33 @@
 	<link rel="stylesheet" href="onsen-css-components.css"-->
     <link rel="stylesheet" href="onsenui-core.min.css">
     <link rel="stylesheet" href="onsen-css-components.min.css">
-    <link rel="stylesheet" href="./ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="./ionicons/css/ionicons.css">
     <link rel="stylesheet" href="my.css">
 
-    <script src="cordova.js"></script>
     <script src="onsenui.js"></script>
     <script>
 		ons.disableAutoStatusBarFill();
 		ons.disableAutoStyling();
+        ons.disableIconAutoPrefix();
 	</script>
     <script src="jquery-1.12.1.js"></script>
-    <script type="text/javascript" src="lang.js"></script>
-    <script type="text/javascript" src="strongs-greek.js"></script>
-    <script type="text/javascript" src="menu.js"></script>
-    <script type="text/javascript" src="androidUtil.js"></script>
-    <script type="text/javascript" src="morphcodedict.js"></script>
-    <script type="text/javascript" src="jszip.js"></script>
-    <script type="text/javascript" src="jszip-utils.js"></script>
-    <script type="text/javascript" src="greek.js"></script>
+    <script src="lang.js"></script>
+    <script src="strongs-greek.js"></script>
+    <script src="menu.js"></script>
+    <script src="androidUtil.js"></script>
+    <script src="iosUtil.js"></script>
+    <script src="morphcodedict.js"></script>
+    <script src="jszip.js"></script>
+    <script src="jszip-utils.js"></script>
+    <script src="greek.js"></script>
+    <script src="findtext.js"></script>
     <script src="util.js"></script>
     <script>
-    	var debugF = false;
-    	var script = document.createElement('script');
-		script.type='text/javascript';
-		if(debugF) {
-		  	script.src = "http://192.168.1.13:8080/target/target-script-min.js#anonymous";
-			document.getElementsByTagName('head')[0].appendChild(script);
-		}
-
-		function popupHistory( event){
+    	function popupHistory( event){
 			LastTdPopup = null;
 			popTooltip(makeHistoryList());
 		}
 		ons.ready(function(){
-			console.log('ons.ready: window.Cordova=' + window.Cordova);
 			var element = document.getElementById("overlay");
 			element.ontouchmove = function(event) {
 			    if (!event.elementIsEnabled) {
@@ -65,6 +58,12 @@
                     </div>
                     <div uilang="Grammar"></div>
                 </ons-list-item>
+                <ons-list-item tappable onclick="util.load('pronounce.html', {});">
+                    <div class="left">
+                        <img class="list-item__thumbnail" src="images/pronounce.png">
+                    </div>
+                    <div uilang="Pronounciation"></div>
+                </ons-list-item>
                 <ons-list-item tappable onclick="util.load('FindText.html', {})">
                     <div class="left">
                         <img class="list-item__thumbnail" src="images/search.png">
@@ -83,17 +82,11 @@
                     </div>
                     <div uilang="History"></div>
                 </ons-list-item>
-                <ons-list-item tappable onclick="util.menuClose(); return goPrevChapter();">
+                <ons-list-item tappable onclick="util.menuClose(); return goHelp();">
                     <div class="left">
-                        <img class="list-item__thumbnail" src="images/prevChapter.png">
+                        <img class="list-item__thumbnail" src="images/help.png">
                     </div>
-                    <div uilang="PreviousChapter"></div>
-                </ons-list-item>
-                <ons-list-item tappable onclick="util.menuClose(); return goNextChapter();">
-                    <div class="left">
-                        <img class="list-item__thumbnail" src="images/prevChapter.png" style="transform: scaleX(-1); -webkit-transform: scaleX(-1)">
-                    </div>
-                    <div uilang="NextChapter"></div>
+                    <div uilang="Help"></div>
                 </ons-list-item>
             </ons-list>
         </ons-page>
@@ -123,22 +116,22 @@
         <ons-toolbar id="maintoolbar"  class="myToolbar">
             <div class="left">
             	<ons-toolbar-button id="splitter-toggle" onclick="util.open()">
-            		<ons-icon icon="ion-navicon" size="28px"></ons-icon>		
+            		<ons-icon icon="icon-menu" size="24px"></ons-icon>
             	</ons-toolbar-button>
             	<ons-toolbar-button id="splitter-toggle" onclick="return goPrevChapter();">
-            		<ons-icon icon="ion-arrow-left-a" size="28px"></ons-icon>		
+            		<ons-icon icon="icon-left-big" size="24px"></ons-icon>
             	</ons-toolbar-button>
             	<ons-toolbar-button id="splitter-toggle" onclick="speakOff();">
-            		<ons-icon icon="ion-android-volume-off" size="28px"></ons-icon>		
+            		<ons-icon icon="icon-volume-off" size="24px"></ons-icon>
             	</ons-toolbar-button>
             </div>
             <div class="center" id="verseTitle">Loading...</div>
             <div class="right">
             	<ons-toolbar-button id="splitter-toggle" onclick="return goNextChapter();">
-            		<ons-icon icon="ion-arrow-right-a" size="28px"></ons-icon>		
+            		<ons-icon icon="icon-right-big" size="24px"></ons-icon>
             	</ons-toolbar-button>
                 <ons-toolbar-button onclick="util.load('setting.html', {})" >
-                    <ons-icon icon="ion-android-settings"></ons-icon>
+                    <ons-icon icon="icon-cog" size="24px"></ons-icon>
                 </ons-toolbar-button>
             </div>
         </ons-toolbar>
@@ -161,18 +154,23 @@
 	    -moz-box-shadow: 0 0 12px rgba(0,0,0,.6);text-align: center;">
             <div class="r_flex_container">
                 <ons-row style="flex:none; height:40px; margin:2px;" vertical-align="center">
-                    <ons-col width="120px">
+                    <ons-col width="90px">
                         <ons-select id="versionCB"></ons-select>
                     </ons-col>
                     <ons-col width="70px">
                         <div style="text-align:right" uilang="Words"></div>
                     </ons-col>
-                    <ons-col>
-                        <ons-search-input
+                    <ons-col width="160px">
+                        <ons-search-input id="searchText"
                                 placeholder="Search"
-                                onchange="findTxtInBible( this.value, getSelVal('versionCB'))"
+                                onchange="findTxtInBible()"
                         ></ons-search-input>
                     </ons-col>
+                    <ons-col>
+	                    <ons-toolbar-button onclick="findTxtInBible()" >
+	                    <ons-icon icon="ion-search"></ons-icon>
+                    </ons-col>
+                </ons-toolbar-button>
                 </ons-row>
                 <div class="scroller">
                     <ons-list id="foundList">

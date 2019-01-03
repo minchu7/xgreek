@@ -32,12 +32,14 @@
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
+      "filename" : "iTunesArtwork@1x.png",
       "minimum-system-version" : "7.0",
       "scale" : "2x"
     },
     {
       "orientation" : "portrait",
       "idiom" : "iphone",
+      "filename" : "iTunesArtwork@3x.png",
       "minimum-system-version" : "7.0",
       "subtype" : "retina4",
       "scale" : "2x"

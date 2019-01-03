@@ -77,6 +77,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA01603C214D9B35007A2F36 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA6ADA5A212B400400CCA326 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +92,7 @@
 				FA6ADA7A212B400500CCA326 /* xgreekTests */,
 				FA6ADA85212B400600CCA326 /* xgreekUITests */,
 				FA6ADA64212B400400CCA326 /* Products */,
+				FA01603C214D9B35007A2F36 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -198,18 +206,27 @@
 				TargetAttributes = {
 					FA6ADA62212B400400CCA326 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.SafariKeychain = {
 								enabled = 0;
 							};
 						};
 					};
 					FA6ADA76212B400500CCA326 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = FA6ADA62212B400400CCA326;
 					};
 					FA6ADA81212B400500CCA326 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = FA6ADA62212B400400CCA326;
 					};
 				};
@@ -442,6 +459,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = xgreek/xgreek.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DJCL89LV6X;
@@ -456,7 +474,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -466,6 +484,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = xgreek/xgreek.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DJCL89LV6X;
@@ -479,7 +498,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = xgreek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -499,7 +518,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = daybread.org.xgreekTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xgreek.app/xgreek";
 			};
@@ -520,7 +539,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = daybread.org.xgreekTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/xgreek.app/xgreek";
 			};
@@ -540,7 +559,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = daybread.org.xgreekUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = xgreek;
 			};
@@ -560,7 +579,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = daybread.org.xgreekUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = xgreek;
 			};
