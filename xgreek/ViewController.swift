@@ -64,15 +64,18 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler{
                     print(error)
                 }
             }
-            var messageBody = message.body as? String ?? ""
-            messageBody = replaceNoSoundWord( messageBody)
+            let messageBody = message.body as? String ?? ""
             let utterance = AVSpeechUtterance(string: messageBody)
             let v = AVSpeechSynthesisVoice(language: "el-GR")
             //let utterance = AVSpeechUtterance(string: "this English test")
             //let v = AVSpeechSynthesisVoice(language: "en-US")
             //print( v.debugDescription);
             utterance.voice = v
-            utterance.rate = 0.25
+            if( messageBody.count > 40){
+                utterance.rate = 0.0001
+            }else{
+                utterance.rate = 0.1
+            }
             utterance.volume = 1
             if synthesizer.isSpeaking {
                 synthesizer.stopSpeaking(at: .immediate)
@@ -81,30 +84,6 @@ class ViewController: UIViewController, WKUIDelegate, WKScriptMessageHandler{
                 self.synthesizer.speak(utterance)
             }
         }
-    }
-    func replaceNoSoundWord(_ inStr:String)->String{
-        let key = "υιου", toW = "γιου"
-        var string = inStr
-        while let idx = string.index(of:key){
-            var newStr = ""
-            if idx.encodedOffset > 0 {
-                if string[idx.encodedOffset-1] != " " {
-                    return inStr
-                }
-                newStr = "\(string[..<idx])" + toW
-            }else{
-                newStr = toW
-            }
-            let endIdx = key.count + idx.encodedOffset
-            if  endIdx != string.count{
-                if string[endIdx] != " "{
-                    return  inStr
-                }
-                newStr += "\(string[endIdx ..< string.count])"
-            }
-            string = newStr
-        }
-        return string
     }
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         title = webView.title

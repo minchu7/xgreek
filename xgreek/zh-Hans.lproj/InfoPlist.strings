@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  xgreek
+
+  Created by Min Chu on 7/16/19.
+  Copyright © 2019 user144284. All rights reserved.
+*/
+/* Localized Bundle Display Name */
+"CFBundleDisplayName" = "圣经希中英对照";
