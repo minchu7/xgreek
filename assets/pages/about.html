@@ -1,0 +1,39 @@
+<about class="app-page" id='about'>
+    <header class="header-bar">
+		<div class="btn pull-left icon icon-arrow-back" onclick="backOnePage();"></div>
+		<div class="title center" uilang="Help"></div>
+	</header>
+    <div class="card" style="position:relative; top:44px;">
+	   <style>
+			.center {
+			  text-align: center;
+			}
+		</style>
+   	    <img class="center" id="LogoImg" src="images/icon.png"
+   	    	style="display: block; margin-left: auto; margin-right: auto; width: 150px">
+   	    <br />
+		<b><div class="center" uilang="AppName"></div></b>
+		<div class="center" >Ver. 2.1</div>
+		<div class="center" uilang="Publisher"></div>
+		<div class="center" >Copyright&copy;2019<br /> daybread.org</div>
+		<div class="center" >All rights reserved.</div>
+		<br />
+        <div style="text-align: center; margin: 10px;">
+            <button onclick="return goTutorial();" uilang="goTutorial"></button>
+        </div>
+		<div style="text-align: center; margin: 10px;">
+			<button onclick="return goHelp();" uilang="goHelp"></button>
+		</div>
+	</div>
+</about>
+<password class="app-page" id='about'>
+    <header class="header-bar">
+		<div class="btn pull-left icon icon-arrow-back" onclick="backOnePage();"></div>
+		<div class="title center">Tester permit</div>
+	</header>
+    <div class="card" style="position:relative; top:44px;">
+	<div class="title" id="passwordTxt">Please enter password to become a new features tester:</div>
+	<input type="text" id="permitPassword" style="width: 250px; margin-top: 5px;"></input><br/>
+	<button id="pwOkBtn" style="margin: 10px 10px 10px 120px;" onclick="checkPermitPw();">Ok</button>
+	<button id="pwCancelBtn" onclick="backOnePage();">Cancel</button>
+</password>

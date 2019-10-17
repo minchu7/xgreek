@@ -1,0 +1,41 @@
+<findtext class="app-page" id="findtext">
+  	<header class="header-bar" id="findtoolbar">
+        <div class="btn pull-left icon icon-arrow-back" onclick="backOnePage();"></div>
+    	<div class="title" uilang="FindText"></div>
+		<div class="btn pull-right icon icon-more-vert" onclick="goPage('setversion');"></div>
+	</header>
+	<div style="height:100%; max-width:600px; margin:auto;-webkit-box-shadow: 0 0 12px rgba(0,0,0,.6);
+	    -moz-box-shadow: 0 0 12px rgba(0,0,0,.6);text-align: center;">
+        <div class="r_flex_container">
+            <div style="flex:none; height:44px; position:relative; top:44px; padding-top:2px; padding-left:2px; margin-bottom:2px; display: flex; align-items: center; background-color: #f2f2f2;">
+                <div width="85px">
+                	<select id="versionCB"></select>
+                </div>
+                <my-col style="flex: 0 0 70px; max-width: 85px;">
+                    <div style="text-align:right" uilang="Words"></div>
+                </my-col>
+                <my-col style="flex: 0 0 175px; max-width: 175px;">
+                    <input id="searchText" type="text" style="width: 160px;"
+                            placeholder="Search"
+                            onchange="findTxtInBible()"
+                    ></input>
+                </my-col>
+                <div width="30px">
+                  <div onclick="findTxtInBible()" >
+                 	<img width="25" height="25" src="./images/search.svg" style="padding-left: 5px"></img>
+                  </div>
+                </div>
+            </div>
+            <div style="font-size: 14px; position: relative; top: 44px; background-color: #eee;">
+				<div class="inline"><span id="FoundVerseKey" class="redtext"></span></div>
+				<div class="inline" uilang="FoundVerses"></div>
+				<div class="inline" id="FoundVerseNo">(0)</div>
+				<div class="inline Blue" id="FoundInVersion"></div>
+			</div>
+			<div class="scroller" style="position:relative; top:44px;">
+                <div id="foundList" class="textPage">
+                </div>
+            </div>
+        </div>
+    </div>
+</findtext>	

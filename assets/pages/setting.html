@@ -1,0 +1,102 @@
+<setting class="app-page" id='setting'>
+    <header class="header-bar">
+        <div class="btn pull-left icon icon-arrow-back" onclick="settingBackBtnClicked();"></div>
+        <div class="title center" uilang="Settings"></div>
+    </header>
+
+    <div class="content">
+        <div style="max-width:400px; margin:auto; text-align: center; -webkit-box-shadow:0 0 12px rgba(0,0,0,.6); -moz-box-shadow:0 0 12px rgba(0,0,0,.6)">
+			<fieldset style="height:40px;margin: 4px 4px;padding: 1px 0 2px;" onchange="changeDisplayLang();">
+			 	<label uilang="Language"></label>
+				<input name="radio_language" type="radio" id="radio-opt-english" value="E">
+				English
+				<input name="radio_language" type="radio" id="radio-opt-simplified" value="S">
+				简体
+				<input name="radio_language" type="radio" id="radio-opt-chinese" value="C">
+				繁體
+			</fieldset>
+    	 	<div class="row text-center">
+            	<div class="phone-6 column"><label uilang="book"></label></div>
+            	<div class="phone-6 column">			
+            		<select onchange="fillChapters();" name="f_BookNo" id="bookCB"></select>
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="phone-6 column" >
+					<label uilang="chapter"></label>
+				</div>
+				<div class="phone-6 column" >
+					<select onchange="fillVerses();" id="chapterCB"></select>
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="phone-6 column" >
+					<label uilang="verse"></label>
+				</div>
+				<div class="phone-6 column" >
+					<select id="verseCB"></select>
+				</div>
+			</div>
+			<div class="row text-center">
+				<div class="phone-6 column" >
+					<button id="GoTextBt" onclick="window.showTextView=true; goVerse(true);" style="margin: 5px;text-align: center;" uilang="GoToText"></button>
+				</div>
+				<div class="phone-6 column" >
+					<button id="GoVerseBt" onclick="window.showTextView=false; goVerse(true);" style="margin: 5px;text-align: center;" uilang="Go_to_Verse"></button>
+				</div>
+			</div>
+			<div class="row text-center" style="border: 1px solid LightGrey;">
+			</div>
+			<div class="text-center">
+				<div class="phone-6 column" >
+					<label uilang="Arrange_display_layout"></label>
+				</div>
+				<div class="phone-6 column" >
+					<button id="ShowSettingBt" onclick="window.showTextView=false; showNewSetting(event);" uilang="Show_new_setting" style="margin-top: 5px;"></button>
+				</div>
+			</div>
+			<style>
+			.rowVersion{
+			    width: 80%;
+				height: 40px;
+				display: inline-table;
+				margin-top: 2px;
+				border: 1px solid gray;
+				border-radius: 5px;
+				opacity: 1;
+				transition: opacity 0.5s; 
+			}
+			.rowVersion.fade {
+				opacity: 0;
+			}
+			.btn {
+			    min-height: 30px;
+				margin: 3px;
+				padding: 5px 8px;
+				border-radius: 5px;
+				width: 30px;
+			}
+			.vrowcenter{
+				margin-top: 10px;
+			}
+			div[disabled]{
+				opacity: 0.3;
+			}
+			</style>
+			<div class="text-center" style="border-top: 1px solid LightGrey;">
+				<div id="showNewSetting"></div>
+			</div>
+			<img width="25" height="25" src="images/icon-swap.png">
+			<div class="text-center" style="border-top: 1px solid LightGrey;">
+			<div id="notShowItems"></div>
+			</div>
+		</div>
+    </div>
+</setting>
+
+<script>
+	/*
+	 * JavaScript code can be executed when the template is loaded
+	 */
+</script>
+    

@@ -1,0 +1,379 @@
+.Blue{
+	color: blue;
+}
+li div{
+	display: inline;
+	vertical-align: top;
+}
+.content ul{
+	list-style-type: none;
+}
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+my-modal{
+    white-space: nowrap;
+    color: inherit;
+    background: 0 0;
+    line-height: normal;
+    background-clip: padding-box;
+    font-family: -apple-system,'Helvetica Neue',Helvetica,Arial,'Lucida Grande',sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: table;
+    z-index: 88888;
+}
+.textPage{
+	text-align: left; 
+	margin: 0 4px 0 4px;
+}
+.headerInline{
+	display: inline-flex;
+	height: 44px;
+	vertical-align: top;
+}
+/*findtext page*/
+.r_flex_container{
+    height: 100%;
+    display: flex;
+    margin: 0;
+	flex-flow: column nowrap;
+}
+.inline{
+    display: inline-block;
+}
+.redtext{
+	color : red;
+	display: inline-block;
+}
+.scroller {
+  flex: auto;
+  overflow-y:scroll;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  -ms-scroll-snap-type: mandatory;
+}
+/*setversion*/
+.card {
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    box-shadow: 0 1px 2px rgba(0,0,0,.12);
+    border-radius: 8px;
+    margin: 8px;
+    padding: 16px;
+    text-align: left;
+    word-wrap: break-word;
+}
+/*for setting page*/
+select{
+    min-height: 40px;
+    cursor: pointer;
+    filter: Alpha(Opacity=0);
+    z-index: 2;
+    border-width: 2px;
+    border-style: solid;
+    margin: 2px;
+    border-color: #ccc;
+    webkit-border-radius: 4px;
+    border-radius: 4px;
+    width: 95%;
+}
+label {
+    margin: 6px;
+    display: inline-block;
+}
+
+/*for home page*/
+td div{
+	display: inline;
+}
+.gpos td {
+	white-space: nowrap;
+	text-align: left;
+}
+table.gpos{
+	border-collapse:collapse;
+}
+.gramma table{
+	border: 1px solid #000;
+}
+.gramma div{
+	display: inline;
+}
+.borderTbl td {
+    border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+}
+/* for interlinear table*/
+@font-face {
+	font-family: 'SBL_grk';
+	font-style: normal;
+	font-weight: 400;
+	src: local('SBL_grk'), local('SBL_grk-Regular'), url(SBL_grk.ttf) format('truetype');
+}
+.TextPage div{
+	display: inline;
+	color: black;
+	font-size:16px;
+	padding:3px 0px;
+	font-family: 'SBL_grk', sans-serif;
+}
+table[id=verse-table] div{
+	display: inline;
+}
+#verse-table {
+	table-layout:fixed;
+	background:#befefe;
+	/* border-collapse: separate; */
+	/* border-spacing: 2px; */
+}
+table table td{
+	white-space: nowrap;
+	color: black;
+	font-size:16px;
+	text-align:center;
+	padding:3px 2px;
+	font-family: 'SBL_grk', sans-serif;
+	background-color:white;
+    -webkit-user-select: none; /* disable selection/Copy of UIWebView */
+    -webkit-touch-callout: none; /* disable the IOS popup when long-press on a link */
+}
+table table td.strongCode{
+	display:table-cell;
+	vertical-align:middle;
+	height:25px;
+	color:#FFFFFF;
+	background-color:#006699;
+	cursor:pointer;
+}
+table table td.morphCode{
+	display:table-cell;
+	vertical-align:middle;
+	height:25px;
+	color:#CCFFFF;
+	background-color:#006666;
+	cursor:pointer;
+}
+table table td.greekTD{
+	display:table-cell;
+	vertical-align:middle;
+	height:25px;
+	color:black;
+	background-color: #e0ffff;
+	cursor:pointer;
+}
+table table td.noteWord{
+	display:table-cell;
+	vertical-align:middle;
+	height:25px;
+	color:black;
+	background-color:lightgrey;
+	cursor:pointer;
+}
+a.aSeqTag{
+	/*
+	display:block;
+	text-decoration:underline;
+	cursor:pointer;
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	font-family: inherit;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: auto;
+	text-overflow: ellipsis;
+	text-decoration: none;
+	white-space: nowrap;
+	background: none;
+	bottom: 0px;
+	right: 10px;
+	margin: 0;
+	padding: 0 0px;
+	color: black;
+	text-shadow: none;
+	-webkit-box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, rgba(0, 0, 0, 0.2) 0 1px 2px inset;
+	box-shadow: rgba(255, 255, 255, 0.2) 0 1px 0, rgba(0, 0, 0, 0.2) 0 1px 2px inset;
+	border: 1px solid #2d3f57;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-image: none;
+	background-color: #a0b0ca;
+	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, lightgrey), color-stop(50%, white), color-stop(51%, white), color-stop(100%, lightgrey));
+	background-image: -webkit-linear-gradient(top, lightgrey, white 50%, white 51%, lightgrey);
+	background-image: linear-gradient(top, lightgrey, white 50%, white 51%, lightgrey);
+	*/
+}
+/*misc */
+.floatBtn{
+	visibility: hidden;
+    display: inline-block;
+    box-sizing: border-box;
+    background-clip: padding-box;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    background: transparent;
+    border: none;
+    line-height: normal;
+    font-family: -apple-system, 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 56px;
+    height: 56px;
+    text-decoration: none;
+    font-size: 25px;
+    line-height: 56px;
+    letter-spacing: 0;
+    color: #ffffff;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #0076ff;
+    border: 0 solid currentColor;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .12);
+    transition: all 0.1s linear;
+    top:0;
+    right:0;
+    position:absolute;
+    z-index: 9999;
+}
+
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.2);
+    overflow-x: hidden;
+    transition: 0.1s;
+}
+.popup {
+    position: fixed;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.popuplist li{
+	padding: 6px 6px;
+} 
+.popuplist {
+    background-color: #fff;
+    color: #55d;
+    text-align: center;
+    margin-left: 0px;
+}
+/* The actual popup */
+.popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 6px;
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+    z-index: 6;
+}
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+/* Toggle this class - hide and show the popup */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+.my-list-table {
+    box-sizing: border-box;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    /* padding: 0 0 0 4px; */
+    margin: 0 0 -1px;
+    transition: background-color .2s linear;
+}
+.popuptext li{
+	font-size: 22px;
+	margin-bottom: 10px;
+}
+my-row {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+}
+my-col {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: block;
+    width: 100%;
+}
+/*actions popover*/
+.myPopover{
+	max-height: max-content;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: block;
+    visibility: visible;
+    padding-inline-start: 10px;
+    position: absolute;
+}
+.myPopover div{
+	display: flex;
+	background-color: #fff;
+	padding: 6px;
+	white-space: nowrap;
+}

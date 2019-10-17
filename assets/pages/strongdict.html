@@ -1,0 +1,72 @@
+<strongdict class="app-page" id='strongdict'>
+    <header class="header-bar" id="strongDictToolbar">
+		<div class="headerInline" style="width:auto">
+			<div class="btn pull-left icon icon-arrow-back" onclick="backOnePage();"></div>
+			<div class="btn pull-left icon icon-chevron-left" onclick="return moveStrongCode(-1);"></div>
+			  	<div class="btn pull-left" id="BackSDictBtn" onclick="backSDict();" style="display:none">
+	    		<img width="25" height="25" src="images/undo.png">
+	    	</div>
+		</div>
+		<div class="title" style="width:auto" uilang="StrongPage"></div>
+		<div class="headerInline">
+			<div class="btn pull-right icon icon-chevron-right" onclick="return moveStrongCode(1);"></div>
+			<div class="btn pull-right icon"></div>
+		</div>
+	</header>
+    <div class="scroller" style="position:relative; top:44px; max-width:600px; margin:auto; height: 100vh">
+		<div class="textPage" id="strongDictInfo">
+			<style>
+				.center {
+				  text-align: center;
+				}
+				.subtitle {
+					font-style: italic;
+					color:blue;
+					font-size: 12px;
+				}
+				gr{
+					color:#0a0;
+				}
+				.centerBtn {
+					text-align: center; 
+					margin: 10px;
+				}
+			</style>
+			<br />
+			<div style="flex:none; display: flex; align-items: center;">
+				<my-col style="flex: 0 0 170px;">
+					<b><div class="center" id="lemma"></div></b>
+				</my-col>
+				<my-col style="flex: 0 0 75px; max-width: 75px;">
+					<input id="findStrongCode" type="tel" pattern="[0-9]*" style="width: 60px;"
+							onchange="goStrongCode()"
+					></input>
+				</my-col>
+				<div width="30px">
+				  <div onclick="goStrongCode()" >
+					<img width="25" height="25" src="./images/search.svg" style="padding-left: 5px"></img>
+				  </div>
+				</div>
+			</div>
+			<div id = "StrongPageDict">
+				<div class="subtitle" uilang="derivation"></div>
+				<div id="derivation"></div>
+				<div class="subtitle" uilang="kjv_def"></div>
+				<div id="kjv_def"></div>
+				<div class="subtitle" uilang="strongs_def"></div>
+			</div>
+			<div id="strongs_def"></div>
+			<br />
+			<div class="centerBtn">
+				<button id="InflectionsListBnt" onclick="return findInflections();" uilang="Inflections"></button>
+				<div id="InflectionsList" class="textPage"></div>
+			</div>
+			<div class="centerBtn">
+				<button id="ConcordanceBnt" onclick="goConcordance();" uilang="Concordance"></button>
+			</div>
+			<div class="centerBtn">
+				<button id="openStrongPageBtn" onclick="return goStrongWeb();" uilang="goWebStrongCodePage"></button>
+			</div>
+		</div>
+	</div>
+</strongdict>

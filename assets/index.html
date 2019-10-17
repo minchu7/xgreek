@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=0.6, maximum-scale=3.0, user-scalable=yes">
+
+    <!-- Phonon CSS -->
+    <link rel="stylesheet" href="lib/phonon-base.css">
+    <link rel="stylesheet" href="lib/components/icons.css">
+    <link rel="stylesheet" href="lib/components/grid.css">
+    
+    <link rel="stylesheet" href="myphonon.css">
+    <link rel="stylesheet" href="my.css">
+    <title>xGreek</title>
+  </head>
+  <body style="touch-action: manipulation;">
+	  <div id="SpashPage" style="color:#fff; text-align: center; background-color: #008888;width: 100%;height: 100%;z-index:999999; position: absolute; display:flex; flex-direction: column;">
+	  	<div style="flex: 1;">Spash infor.</div>
+	  	<div style="flex: 1;">Copyright&copy;2019<br /> daybread.org</div>
+  	  </div>
+	  <!-- the home page is the default one. This page does not require to call its content because we define on its tag.-->
+	  <home data-page="true">
+	  	<header class="header-bar" id="maintoolbar">
+	  	  <div class="headerInline" style="width:auto">
+	    	<div class="btn pull-left icon icon-menu" onclick="openPopover();"></div>
+	    	<div class="btn pull-left icon icon-chevron-left" onclick="return goPrevChapter();"></div>
+	    	<div class="btn pull-left" id="BackTextBtn" onclick="backPrevPage();" style="display:none">
+	    		<img width="25" height="25" src="images/undo.png">
+	    	</div>
+	      </div>
+		  <div class="title" style="width:auto" id='verseTitle'>Loading...</div>
+	      <div class="headerInline"> 
+	    	<div class="btn pull-right icon icon-chevron-right" onclick="return goNextChapter();"></div>
+			<div class="btn pull-right icon icon-settings" onclick="goPage('setting');"></div>
+	      </div>
+		</header>
+	    <div class="content" id='homePage'>
+			<!-- Hidden popovers in the page content -->
+		    <table style="border-spacing:2px; border-collapse:separate" id="verse-table">
+                <tbody id="verse">
+                <!-- bible verse table entries generated dynamically. -->
+                </tbody>
+            </table>
+		</div>
+	  </home>
+	  <div class="popup" id="popup" onclick="closeOverlay()">
+	    <span class="popuptext" id="popoverTxt">A Simple Popup!</span>
+	  </div>
+	  <div id="overlay" class="overlay" onclick="closeOverlay()"></div>
+	  <div id="overlayPopover" class="overlay" onclick="hidePopover()">
+		<div class="myPopover" id="action-popover">
+			<div onclick="hidePopover(); goPage( 'grammar');"> 
+				<div class="left">
+					<img class="list-item__thumbnail" src="images/grammar.png">
+					<div uilang="Grammar"></div>
+				</div>
+			</div>
+			<div onclick="hidePopover(); goPage( 'pronounce');">
+				<div class="left">
+					<img class="list-item__thumbnail" src="images/pronounce.png">
+					<div uilang="Pronounciation"></div>
+				</div>
+			</div>
+			<div onclick="hidePopover(); goPage( 'findtext');">
+				<div class="left">
+					<img class="list-item__thumbnail" src="images/search.png">
+					<div uilang="FindText"></div>
+				</div>
+			</div>
+			<div onclick="hidePopover(); return flipParallet();">
+				<div class="left">
+					<img class="list-item__thumbnail" src="images/change.png">
+					<div id="actionInterlinear" uilang="ParalletView"></div>
+				</div>
+			</div>
+			<div onclick="hidePopover(); popupHistory();">
+				<div class="left">
+					<img class="list-item__thumbnail" src="images/history.png">
+					<div uilang="History"></div>
+				</div>
+			</div>
+			<div onclick="hidePopover(); goPage( 'about');">
+				<div class="left">
+					<img class="list-item__thumbnail" src="images/help.png">
+					<div uilang="Help"></div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	
+	  <div class="floatBtn" id="volume-off" onclick="speakOff();">
+	  	<img width="25" height="25" src="images/volume-off.svg">
+	  </div>
+	  <my-modal direction="up">
+	    <div style="text-align: center">
+		  <div class="content padded-full">
+			<div class="circle-progress center active">
+			  <div class="spinner"></div>
+			</div>			
+			<div class="padded-bottom"></div>
+			<div class="progress center active">
+				<div class="determinate" style="width: 65%;"></div>
+			</div>
+		  </div> 
+	    </div>
+	  </my-modal>
+  	  <!-- for the second page, Phonon will load its content. -->
+      <grammar data-page="true"></grammar>
+      <setting data-page="true"></setting>
+      <textpage data-page="true"></textpage>
+      <findtext data-page="true"></findtext>
+      <setversion data-page="true"></setversion>
+      <pronounce data-page="true"></pronounce>
+      <about data-page="true"></about>
+	  <password data-page="true"></password>
+      <strongdict data-page="true"></strongdict>
+	
+	    <!-- Optional JavaScript -->
+	    <script src="lib/phonon-core.js"></script>
+	    <script src="lib/jszip.js"></script>
+    	<script src="lib/jszip-utils.js"></script>
+        <!-- our app config -->
+	    <script src="androidUtil.js"></script>
+	    <script src="iosUtil.js"></script>
+        <script src="lang.js"></script>
+	    <script src="tapObjs.js"></script>
+        <script src="home.js"></script>
+        <script src="findtext.js"></script>
+        <script src="setting.js"></script>
+        <script src="drawTable.js"></script>
+        <script src="morphcodedict.js"></script>
+        <script src="textPage.js"></script>
+        <script src="setversion.js"></script>
+        <script src="strongdict.js"></script>
+		<!--script src="ch-strong.js"></script-->
+		<!--script src="strongs-greek.js"></script-->
+
+        <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,341 @@
+<pronounce class="app-page" id='pronounce'>
+    <header class="header-bar">
+        <div class="btn pull-left icon icon-arrow-back" onclick="backOnePage();"></div>
+        <div class="title center" uilang="pageTitle"></div>
+    </header>
+
+    <div class="content">
+		<div uilang="Why"></div>
+	    <a href='#note'><div uilang="ClickHere"></div></a><br/>
+		<strong>The Alphabet</strong> Click blue words for sound!!!
+	    <table border="2">
+	    <tbody>
+	        <tr>
+	            <td>&nbsp;</td>
+	            <td><strong>Letter</strong></td>
+	            <td><strong>Name
+	            </strong> </td>
+	            <td><strong>pronunciation</strong></td>
+	            <td><strong>Example</strong></td>
+	        </tr>
+	        <tr>
+	            <td>1</td>
+	            <td><div class="Blue" onclick="speakGr('αφα');">Α α</div></td>
+	            <td>Alpha</td>
+	            <td>
+	            [a] in "f<em><strong>a</strong></em>ther".
+	            </td>
+	            <td class="Blue" onclick="pronounceClicked(event);">ἀγαθός</td>
+	        </tr>
+	        <tr>
+	            <td>2</td>
+	            <td><div class="Blue" onclick="speakGr('βετα');">Β β</div></td>
+	            <td>Beta</td>
+	            <td>*close to [v] in "<b><i>v</i></b>et".</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">βίος</td>
+	        </tr>
+	        <tr>
+	            <td>3</td>
+	            <td><div class="Blue" onclick="speakGr('γαμα');">Γ γ</div></td>
+	            <td>Gamma</td>
+	            <td>
+		    		*[<span lang="el">γa</span>]: close to [ga] in "<em><strong>ga</strong></em>rden".. <br />
+		            *[<span lang="el">γo</span>]: close to [go] in "<em><strong>go</strong></em>t". <br />
+					[<span lang="el">γe</span>]: [ye] in "<b><i>ye</i></b>s".<br />
+		            [<span lang="el">γu</span>]: [yi] in "<b><i>yi</i></b>eld".<br /> 
+		            [<span lang="el">γι</span>]: [yi] in "<b><i>yi</i></b>eld".
+	            </td>
+	            <td class="Blue">
+	                <div onclick="pronounceClicked(event);">γεγραπται</div>
+	                <div onclick="pronounceClicked(event);">γέγονεν</div>
+	                <div onclick="pronounceClicked(event);">ἐγέννησεν</div>
+	            </td>
+	        </tr>
+	        <tr>
+	            <td>4</td>
+	            <td><div class="Blue" onclick="speakGr('δελτα');">Δ δ</div></td>
+	            <td>Delta</td>
+	            <td>*close to [<u>th</u>] in "<b><i>th</i></b>is".</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">δῶρον</td>
+	        </tr>
+	        <tr>
+	            <td>5</td>
+	            <td><div class="Blue" onclick="speakGr('εψίλον');">Ε ε</div></td>
+	            <td>Epsilon</td>
+	            <td>
+	    		[e] in "p<b><i>e</i></b>t"</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">ετι</td>
+	        </tr>
+	        <tr>
+	            <td>6</td>
+	            <td><div class="Blue" onclick="speakGr('ζετα');">Ζ ζ</div></td>
+	            <td>Zeta</td>
+	            <td>[z] in "<b><i>z</i></b>one".</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">ζωῆς</td>
+	        </tr>
+	        <tr>
+	            <td>7</td>
+	            <td><div class="Blue" onclick="speakGr('ητα');">Η η</div></td>
+	            <td>Eta</td>
+	            <td>
+	    		[ee] in "b<b><i>ee</i></b>", but shorter.</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">ημερα</td>
+	        </tr>
+	        <tr>
+	            <td>8</td>
+	            <td><div class="Blue" onclick="speakGr('θετα');">Θ θ</div></td>
+	            <td>Theta</td>
+	            <td>[th] in "<b><i>th</i></b>ank".</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">θεος</td>
+	        </tr>
+	        <tr>
+	            <td>9</td>
+	            <td><div class="Blue" onclick="speakGr('ιοτα');">Ι ι</div></td>
+	            <td>Iota</td>
+	            <td>
+	    		[ee] exactly like η(<i>eta</i>) (see above). 
+	    		</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">ιδω</td>
+	        </tr>
+	        <tr>
+	            <td>10</td>
+	            <td><div class="Blue" onclick="speakGr('κατα');">Κ κ</div></td>
+	            <td>Kappa</td>
+	            <td>
+	    		[k] in "<b><i>k</i></b>eep".
+	    		</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">κατα</td>
+	        </tr>
+	        <tr>
+	            <td>11</td>
+	            <td><div class="Blue" onclick="speakGr('λαμβδα');">Λ λ</div></td>
+	            <td>Lambda</td>
+	            <td>
+	    		[l] in "<b><i>l</i></b>ip".
+	    		</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">λόγος</td>
+	        </tr>
+	        <tr>
+	            <td>12</td>
+	            <td><div class="Blue" onclick="speakGr('μυ');">Μ μ</div></td>
+	            <td>Mu</td>
+	            <td>
+	    		[m] in "<b><i>m</i></b>ap".
+	    		</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">μια</td>
+	        </tr>
+	        <tr>
+	            <td>13</td>
+	            <td><div class="Blue" onclick="speakGr('νυ');">Ν ν</div></td>
+	            <td>Nu</td>
+	            <td>
+	    		[n] in "<b><i>n</i></b>ew";
+	    		</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">νίκη</td>
+	        </tr>
+	        <tr>
+	            <td>14</td>
+	            <td><div class="Blue" onclick="speakGr('ξί');">Ξ ξ</div></td>
+	            <td>Ksi</td>
+	            <td>
+	    		[ks] in "fo<b><i>x</i></b>".
+	    		</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">ξύλον</td>
+	        </tr>
+	        <tr>
+	            <td>15</td>
+	            <td><div class="Blue" onclick="speakGr('ομίκρομ');">Ο ο</div></td>
+	            <td>Omicron</td>
+	            <td>
+	    		[o] in "g<b><i>o</i></b>t".
+	    		</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">οταν</td>
+	        </tr>
+	        <tr>
+	            <td>16</td>
+	            <td><div class="Blue" onclick="speakGr('πί');">Π π</div></td>
+	            <td>Pi</td>
+	            <td>
+	    		[p] in "<b><i>p</i></b>ot".
+	    		</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">παντα</td>
+	        </tr>
+	        <tr>
+	            <td>17</td>
+	            <td><div class="Blue" onclick="speakGr('ρο');">Ρ ρ</div></td>
+	            <td>Rho</td>
+	            <td>
+	    		[r] in "<b><i>r</i></b>od".</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">ῥῆμα</td>
+	        </tr>
+	        <tr>
+	            <td>18</td>
+	            <td><div class="Blue" onclick="speakGr('σίγμα');">Σ σ (ς)</div></td>
+	            <td>Sigma</td>
+	            <td>
+	    		*close to [s] in "<b><i>s</i></b>oap". At last character in the word use 'ς'.</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">σῶμα</td>
+	        </tr>
+	        <tr>
+	            <td>19</td>
+	            <td><div class="Blue" onclick="speakGr('τα');">Τ τ</div></td>
+	            <td>Tau</td>
+	            <td>
+	    		[t] in "<b><i>t</i></b>op".</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">τιμή </td>
+	        </tr>
+	        <tr>
+	            <td>20</td>
+	            <td><div class="Blue" onclick="speakGr('υψίλον');">Υ υ</div></td>
+	            <td>Upsilon</td>
+	            <td>
+	            [ee] exactly like η(<i>eta</i>) and ι(<i>iota</i>)(see above).
+	    		</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">ὕδατος</td>
+	        </tr>
+	        <tr>
+	            <td>21</td>
+	            <td><div class="Blue" onclick="speakGr('φι');">Φ φ</div></td>
+	            <td>Phi</td>
+	            <td>
+	            [f] in "<b><i>f</i></b>at";
+	            </td>
+	            <td class="Blue" onclick="pronounceClicked(event);">φάγω</td>
+	        </tr>
+	        <tr>
+	            <td>22</td>
+	            <td><div class="Blue" onclick="speakGr('χι');">Χ χ</div></td>
+	            <td>Chi</td>
+	            <td>
+	    		*close to [h] in "<b><i>h</i></b>ip".</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">Χριστός</td>
+	        </tr>
+	        <tr>
+	            <td>23</td>
+	            <td><div class="Blue" onclick="speakGr('ψει');">Ψ ψ</div></td>
+	            <td>Psi</td>
+	            <td>
+	            [ps] in "shi<b><i>ps</i></b>".
+	            </td>
+	            <td class="Blue" onclick="pronounceClicked(event);">ψυχὴν</td>
+	        </tr>
+	        <tr>
+	            <td>24</td>
+	            <td><div class="Blue" onclick="speakGr('ωμεγα');">Ω ω</div></td>
+	            <td>Omega</td>
+	            <td>
+	            [o] exactly like ο(<i>omicron.</i>) 
+	            </td>
+	            <td class="Blue" onclick="pronounceClicked(event);">ὧδε</td>
+	        </tr>
+	    </tbody>
+	    </table>
+	    <br/>
+	    <strong>Consonantal Cluster</strong>
+	    <table border="2" id="table5">
+	    <tbody>
+	    	<tr>
+	        	<td width="70px"><span lang="el">ΜΠ&nbsp; μπ</span></td>
+	        	<td>[mb] in "co<i><b>mb</b></i>at".</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">λαμπει</td>
+		    </tr>
+		    <tr>
+		        <td><span lang="el">ΝΤ&nbsp; ντ</span></td>
+		        <td>[nd] in "fu<i><b>nd</b></i>".</td>
+	            <td class="Blue" onclick="pronounceClicked(event);">παντας</td>
+		    </tr>
+		    <tr>
+		        <td><span lang="el">ΓΚ&nbsp; γκ<br/>
+				ΓΓ&nbsp; γγ</span></td>
+		        <td>[ng] in "fu<b><i>ng</i></b>us".<br>
+				Note: the form <span lang="el">γγ </span>never appears at the beginning of words.</td>
+	            <td class="Blue">
+	                <div onclick="pronounceClicked(event);">ηνεγκεν</div><br/>
+	                <div onclick="pronounceClicked(event);">ἄγγελοι</div>
+	            </td>
+		    </tr>
+		    <tr>
+		        <td><span lang="el">ΓΧ&nbsp; γχ<br/>ΓΞ&nbsp; γξ</span></td>
+		        <td>[n] in "fu<b><i>n</i></b>".</td>
+	            <td class="Blue">
+	                <div onclick="pronounceClicked(event);">ελεγχθη</div><br/>
+	                <div onclick="pronounceClicked(event);">ελεγξον</div>
+	            </td>
+		    </tr>
+	    </tbody></table>
+	    <br/>
+	    Generally, when two vowels occur together, pronounce each vowel separately. However, exceptions to this rule are presented in the following table:<br/>
+	    <strong>Digraph</strong>(a combination of two letters representing one sound):
+	    <table border="2">
+	    <tbody><tr>
+	        <td width="70px"></td>
+	        <td><strong>Pronunciation</strong></td>
+	        <td><strong>Example</strong></td>
+	    </tr>
+	    <tr>
+	        <td>AΙ αι</td>
+	        <td>Exactly like ε (epsilon)</td>
+	        <td class="Blue">
+	            <div onclick="pronounceClicked(event);">και</div>
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>EΙ ει</td>
+	        <td>Exactly like ι (iota)</td>
+	        <td class="Blue">
+	            <div onclick="pronounceClicked(event);">ειδες</div>
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>OΙ οι</td>
+	        <td>Exactly like ι (iota)</td>
+	        <td class="Blue">
+	            <div onclick="pronounceClicked(event);">μοι</div>
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>ΥΙ υι</td>
+	        <td>Exactly like ι (iota)</td>
+	        <td class="Blue">
+	            <div onclick="pronounceClicked(event);">υἱός</div>
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>OΥ ου</td>
+	        <td>[oo] in "f<i><b>oo</b></i>d"</td>
+	        <td class="Blue">
+	            <div onclick="pronounceClicked(event);">ουπω</div>
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>AΥ αυ</td>
+	        <td>[av] when followed by a voiced sound, otherwise [af].</td>
+	        <td class="Blue">
+	            <div onclick="pronounceClicked(event);">αὐτός</div><br>
+	            <div onclick="pronounceClicked(event);">δαυιδ</div>
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>EΥ ευ</td>
+	        <td>[ev] when followed by a voiced sound, otherwise [ef].</td>
+	        <td class="Blue">
+	            <div onclick="pronounceClicked(event);">ευλογια</div>
+	            <div onclick="pronounceClicked(event);">τελευτης</div>
+	        </td>
+	    </tr>
+	    <tr>
+	        <td>HΥ ηυ</td>
+	        <td>[eev] when followed by a voiced sound, otherwise [eef].</td>
+	        <td class="Blue">
+	            <div onclick="pronounceClicked(event);">ηὗρον</div>
+	            <div onclick="pronounceClicked(event);">προσηυξατο</div>
+	        </td>
+	    </tr>
+	</tbody></table>
+	<br/>
+	<div id='note'><div uilang="Note"></div></div>
+	<div uilang="Disc"></div><br/>
+	<br/>
+	<br/>
+	</div>
+</pronounce>
